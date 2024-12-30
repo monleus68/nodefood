@@ -6,7 +6,7 @@ export default class rate_res extends Model {
   return super.init({
     users_id: {
       type: DataTypes.INTEGER,
-      allowNull: true,
+      allowNull: false,
       references: {
         model: 'users',
         key: 'users_id'
@@ -15,7 +15,7 @@ export default class rate_res extends Model {
     },
     res_id: {
       type: DataTypes.INTEGER,
-      allowNull: true,
+      allowNull: false,
       references: {
         model: 'restaurant',
         key: 'res_id'
@@ -24,7 +24,7 @@ export default class rate_res extends Model {
     },
     amount: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: false
     },
     date_rate: {
       type: DataTypes.DATE,
